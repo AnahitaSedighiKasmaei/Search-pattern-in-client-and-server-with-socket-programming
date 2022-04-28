@@ -18,7 +18,7 @@ arguments
 > argv[2]= file1(Relative or absolute path of the first file)
 > argv[3]= file2 (Relative or absolute path of the second file)
 
-Ex: $ dgrep hello sample.txt test.txt
+Ex: $ ./dgrep peace file1.txt file2.txt
 
 Validations:
 > If either file1 or file2 cannot be found by the client, the client program is
@@ -33,3 +33,18 @@ the system() library function to execute commands)
 > The communication between the server and the client must be through sockets
 > The client should finally display the combined results (from both the client and
 the server – in that order) on the standard output.
+
+
+Command for running client:
+
+Command for building the client:
+> gcc -o dgrep dgrep.c
+Command for runing client:
+> ./dgrep peace file1.txt file2.txt
+
+Command for running client:
+
+Command for building the Server:
+> gcc -o server server.c
+Command for runing server:
+> ./server
