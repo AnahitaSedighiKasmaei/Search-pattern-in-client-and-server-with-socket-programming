@@ -26,16 +26,8 @@ int port = 5000;
 void runCommand(int socket, char pattern[], char filePath[])
 {
     char string[1024]; // For very long path
-
-    // This is the second way different from client side. We used system just to colorize the grep.
     sprintf(string, "export GREP_COLORS='ms=01;34'; grep --color=always --line-number --ignore-case --text --with-filename %s %s", pattern, filePath);
     system(string);
-    // char *program = "grep";
-    // char *args[] = {program, "--color=always", "--text", "--with-filename", "-w", pattern, filePath, NULL};
-
-    // // Run Command
-    // if (execvp(program, args) < 0)
-    //     die("Error in execvp");
 }
 
 void handle_client(int socket)
