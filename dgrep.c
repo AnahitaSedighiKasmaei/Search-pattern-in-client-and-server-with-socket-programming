@@ -132,7 +132,7 @@ int main(int argc, char *argv[])
     if (pid == 0)
     {
         printf("\n\n");
-        printf("\n&&&&&&&&&&&&&&&&&&&&&&&&&&&&[Client Result]&&&&&&&&&&&&&&&&&&&&&&&&&&&&&\n\n");
+        printf("\n ===================================[Client Result] =================================== \n\n");
         run_command(socket, argv[1], argv[2]);
     }
     else if (pid > 0)
@@ -146,7 +146,7 @@ int main(int argc, char *argv[])
         send_file(socket, argv[3]);
 
         printf("\n\n");
-        printf("\n&&&&&&&&&&&&&&&&&&&&&&&&&&&&[Server Result]&&&&&&&&&&&&&&&&&&&&&&&&&&&&&\n\n");
+        printf("\n =================================== [Server Result] =================================== \n\n");
 
         // Receive the response of grep on file 2 from server
         read_response(socket);
