@@ -35,7 +35,7 @@ the system() library function to execute commands)
 the server – in that order) on the standard output.
 
 
-Command for running client:
+- command:
 
 Command for building the client:
 > gcc -o dgrep dgrep.c
